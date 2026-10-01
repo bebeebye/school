@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I=Школьный Портал - Расписание и Учеба</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: text-shadow 0.3s;
+        }
+
+        nav a:hover {
+            text-decoration: none;
+            text-shadow: 0 0 10px #fff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2 5px rgba(0, 0, 0, 0.1);
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        th,
+        td {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .break-row {
+            background-color: #e74c3c;
+            color: white;
+            font-weight: bold;
+        }
+
+        .profile-card {
+            background-color: #ffffff;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 4px;
+
+        }
+
+        .feedback-form {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .feedback-form button {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer
+        }
+
+        .task-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#schedule">Расписание</a></li>
+            <li><a href="#student">Профиль уеника</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <h1>Добро пожаловать на Школьный Портал</h1>
+    <p>Здесь вы можете ознакомиться с расписанием и информацией для учащихся</p>
+
+    <h2 id="schedule">Расписание занятий</h2>
+    <table>
+        <caption>Расписание на неделю</caption>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Понедельник</th>
+                <th>Вторник</th>
+                <th>Среда</th>
+                <th>Четверг</th>
+                <th>Пятница</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><strong>1</strong></td>
+                <td>Математика</td>
+                <td>Физика</td>
+                <td>Информатика</td>
+                <td>Математика</td>
+                <td>История</td>
+            </tr>
+
+            <tr>
+                <td><strong>2</strong></td>
+                <td>Русский язык</td>
+                <td>Математика</td>
+                <td>Английский</td>
+                <td>Физика</td>
+                <td>Информатика</td>
+            </tr>
+
+            <tr class="break-row">
+                <td cosplan="6">Большая перемена</td>
+            </tr>
+
+            <tr>
+                <td><strong>3</strong></td>
+                <td>Информатика</td>
+                <td>Химия</td>
+                <td>География</td>
+                <td>Литература</td>
+                <td>Биология</td>
+            </tr>
+
+            <tr>
+                <td><strong>4</strong></td>
+                <td>Физкультура</td>
+                <td>История</td>
+                <td>Литература</td>
+                <td>Английский</td>
+                <td>Обществознание</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="student">Информация об ученике</h2>
+
+    <div class="profile-card">
+        <h3>Класс: 8"В"</h3>
+        <p><strong>Классный руководитель:</strong>Айгуль Кайратовна</p>
+        <p><strong>Дежурный класс на этой неделе:</strong>Да</p>
+    </div>
+
+    <h2 id="contact">Обратная связь</h2>
+    <div class="feedback-form">
+        <form action="#" method="post">
+            <label for="name">Введите имя</label>
+            <input type="text" id="name" name="name" placeholder="Введите имя..." required>
+
+            <label for="message">Вопрос или предложение</label>
+            <textarea name="message" id="message" rows="4" placeholder="Напишите сообщение..."></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <div class="task-box">
+        <h2>Задание на практическую работу (Урок №2)</h2>
+
+        <ol>
+            <li><strong>Оформление таблицы:</strong>Измените цвет
+                шапки таблицы (`th`) на другой в блоке `&lt;style&gt;`.</li>
+            <li><strong>Заполнение данных:</strong>Добавьте в
+                расписание еще один столбец — «Суббота» с 4 уроками</li>
+
+            <li><strong>Новый блок:</strong> Создайте раздел
+                «Объявления» (`&lt;div&gt;`) и добавьте 2-3 новости школы с помощью тегов
+                `&lt;h3&gt;` и `&lt;p&gt;`.</li>
+
+            <li><strong>Интерактивность:</strong> Добавьте изображение (логотип школы или фото класса) с помощью тега
+                `&lt;img&gt;`.</li>
+        </ol>
+
+
+    </div>
+</body>
+
+</html>
